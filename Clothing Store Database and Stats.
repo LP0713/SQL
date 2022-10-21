@@ -1,0 +1,27 @@
+--Create a Clothing Store Database
+
+CREATE TABLE Starly_Shop (id INTEGER PRIMARY KEY, Medium TEXT, color TEXT, aisle INTEGER, price INTEGER);
+
+INSERT INTO Starly_Shop Values (1, "Small", "grey", 01, 10);
+INSERT INTO Starly_Shop Values (2, "large", "pink", 02, 1);
+INSERT INTO Starly_Shop Values (3, "medium", "white", 03, 23);
+INSERT INTO Starly_Shop Values (4, "Small", "black", 04, 30);
+INSERT INTO Starly_Shop Values (6, "medium", "green", 05, 12);
+INSERT INTO Starly_Shop Values (7, "large", "blue", 06, 11);
+INSERT INTO Starly_Shop Values (8, "large", "browm", 02, 9);
+INSERT INTO Starly_Shop Values (9, "medium", "pink", 05, 17);
+INSERT INTO Starly_Shop Values (10, "Small", "white", 01, 9);
+INSERT INTO Starly_Shop Values (11, "medium", "black", 02, 5);
+INSERT INTO Starly_Shop Values (12, "large", "green", 03, 8);
+INSERT INTO Starly_Shop Values (13, "medium", "blue", 06, 3);
+INSERT INTO Starly_Shop Values (14, "medium", "brown", 05, 10);
+INSERT INTO Starly_Shop Values (15, "medium", "brown", 07, 10);
+
+--display the database ordered by Aisle. 
+SELECT * FROM Starly_Shop ORDER BY Aisle;
+
+--display the database total SUM PRICE
+SELECT SUM(PRICE) FROM Starly_Shop;
+
+--display the database Price less then -- and order by aisle
+SELECT * FROM Starly_Shop WHERE PRICE < 10 ORDER BY AISLE;
